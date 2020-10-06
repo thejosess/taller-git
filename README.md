@@ -21,9 +21,8 @@ Pueden ser untracked que nos los reconoce y unstanged
         git add
         git commit
 
-    Cuando haces eso para a staged, para volver a unstanged. git restore -
+    Cuando haces eso para a staged, para volver a unstanged. git restore 
 
-* Unstanged:
 
 
 Para subir los cambios a ese repositorio sería con git commit -m "mensaje corto" -m "mensaje largo". 
@@ -45,6 +44,10 @@ Para ver cambios al ultimo commit
 
 Entre commit 
     git diff HEAD id_comit
+
+Para hacer commit y add de archivos ya añadidos 
+
+    git commit -am "texto"
 
 
 ## Local y remoto
@@ -71,9 +74,181 @@ Luego hay que decirle que a partir de ahora la rama será main
 ## Github
 insight es para ver las ramas de forma gráfica
 
-Añadir aqui la parte del taller de TDD
 
 ## SSH y clonar
 Al clonar con https de la pagina, no hace uso de SSH para cambiarlo
 
     git remote set-url origin git@github.com:name/repo
+
+## Licencia desde GITHUB
+LICENCE 
+add new file, LICENCIE y mirar templaye y pones GPL2
+
+## Git Pull
+Para bajar lo que hay en el repo remoto y añadir ese al local
+
+    git pull
+
+
+pull rebase -> 
+pull merge -> la opción por defecto
+
+
+me sale esto -> HEAD -> main, origin/main, origin/HEAD
+porque hemos añadido la rama main al origin (el de github). Y al decirle upstream entonces la rama "princpial" es esa.
+upstream -> subo los cambios cuando no le pongo argumento.
+Main es la rama principal de Origin y tambien la principal de local.
+Al resto tienes que pasarlo al resto.
+
+git push origin main
+//esto le dices que suba lo que tienes en rama main local que lo suba a origin de main, lo hace por defecto al llamarlo upstream. 
+Ver ramas con 
+
+    git branch
+
+    git branch -r
+    //ramas remotas
+
+Con todo esto que signifca al ejecutar git branch -r así
+  origin/HEAD -> origin/main
+  origin/main
+
+//descargar archivo .sh para cuando quieres añadirle algo al repo
+
+## Conflictos de repo
+git status
+abres el archivo concreto y te salen ahí las lineas
+y comando que te pide
+
+eliges con que quedarte
+
+<<<<<< head
+<<<<< commit
+
+## Git restore
+
+Restore te permite eliminar archivos añadidos por git add
+
+    git restore --staged
+
+Y tambien descartar cambios locales en archivos mediante el ultimo commit estable.
+
+    git restore
+
+## Git reset
+
+Regreaar a un punto/commit especifico debil
+
+    git reset --soft id_commit
+
+Duro
+
+    git reset --hard id_commit
+
+volver al ultimo commit
+
+    git reset --soft HEAD^
+
+
+## Git checkout
+
+Como forma de recuperar cambios
+
+    git checkout .
+
+Deshacer todos los cambios de un archivo
+
+    git checkout -- nombreArchivo
+
+
+
+## Ramas
+
+Separar ramas para hacer testeo, experimientación, etc. Rama main es estable y el resto para esas nuevas funcionales que están desarrollando inestables.
+
+Ver las ramas de nuestro repo
+
+    git branch
+
+Crear una branch
+
+    git branch nombre_rama_nueva
+
+
+Cambiar de rama 
+
+    git checkout nombre_rama
+
+
+mezclar ramas y deja el gráfico de las ramas
+
+    git merge nombre_rama
+
+ 
+Primero te vas a la rama master y luego unes con la rama
+    
+    git checkout master
+    git merge rama_distinta
+
+
+creamos y hacemos un checkout en una rama llamada nombre_rama y haces como arriba
+
+    git checkout -b nombre_rama
+
+
+mezclar ramas rompiendo el esquema
+
+    git rebase nombre_rama
+
+!["diferencias"](./imagenes/mezclar.png)
+
+
+Que es git fetch? Trae los cambios pero los deja en otra rama
+    
+    git pull = git fetch + git merge FETCH_HEAD
+
+
+
+## Test y taller curso-TDD
+
+Para crear issues tienes que crear historias de usuario y entonces la issue se encarga de que se cumple una historia de usuario.  
+Parar crear issue vas en github y pones issue, crear issue y la rellenas segun una  [plantilla qa](https://jj.github.io/curso-tdd/).  Las issues se agrupan en milestones (seleccionas en github varias y le das a milestone).     
+
+Los errores y manejar excepciones se crean de forman paralelea y vienen por la necesidad de las HU.    Diseño dirigido por dominio ("se deben de crear modelos de partes del dominio del problema limitados en su contexto, de forma que sea sencillo dividir el proceso de implementación en equipos, cada uno de ellos responsables de una parte del diseño. La integración continua (y los tests correspondientes), permitirán que se asegure la calidad del producto resultante")    
+
+La integración continua es a un primer nivel, la integración continua consiste en incluir en la rama principal los cambios hechos por un miembro del equipo en el momento que estén hechos y pasen los.
+ 
+Cada vez que avances en un hito avanzas en el primer numero de la versión, si falla un test y lo arreglas sería v.0.0.1 -> v0.0.2, si es muy gorde v.0.1.0  
+Sería 
+    
+    git tag -a v0.0.1 -m "texto"
+
+añades tag al push
+
+    git push --tags
+
+Para cerrar una issue seŕia
+
+    git commit -am "texto close #2"
+
+#2 Es el id de la issue.
+
+Para incorporar un cambio a un repositorio que no es nuestro en el que hemos trabajdo, primero
+
+    git fork
+
+y luego
+
+    git pull request
+
+
+
+Es necesario tambien hacer test internos de nuestro código, test de forma automática en la nube (travis), smoke test, test unitarios, etc. Mirar todo el mundo de tests. Tambien se pueden acelerar estos tests con docker. 
+
+
+
+**Para más información**
+
+[curso TDD](https://github.com/JJ/curso-tdd/blob/master/temas/servicios.md)
+
+[Trabajo microservicios](https://github.com/thejosess/microservicios/blob/main/README.md)
