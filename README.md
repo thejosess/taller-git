@@ -72,3 +72,8 @@ Luego hay que decirle que a partir de ahora la rama será main
 insight es para ver las ramas de forma gráfica
 
 Añadir aqui la parte del taller de TDD
+
+## SSH y clonar
+Al clonar con https de la pagina, no hace uso de SSH para cambiarlo
+
+    git remote set-url origin git@github.com:name/repo
