@@ -67,5 +67,3 @@ Despues de hacer un remote hay que subirlo, es empujar al remoto.
 Luego hay que decirle que a partir de ahora la rama será main
 
     git push --set-upstream origin main
-
-
