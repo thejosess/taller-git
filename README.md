@@ -67,3 +67,8 @@ Despues de hacer un remote hay que subirlo, es empujar al remoto.
 Luego hay que decirle que a partir de ahora la rama será main
 
     git push --set-upstream origin main
+
+## Github
+insight es para ver las ramas de forma gráfica
+
+Añadir aqui la parte del taller de TDD
