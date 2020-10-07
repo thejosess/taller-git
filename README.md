@@ -6,7 +6,7 @@ para el manual completo
 
         man git-orden     
        
-Para iniciar repositorio con branch principal que se llama main
+Para iniciar repositorio con branch principal que se llama main. (para ir al final mayusc + G)
     
         git init -b main
 
