@@ -125,6 +125,23 @@ eliges con que quedarte
 <<<<<< head
 <<<<< commit
 
+Para resolverlo puedes hacer
+
+    git push --force 
+
+o puedes resolver conflictos a mano
+
+    git pull 
+
+y ahora coges y editar el archivo que te sale con conflicto
+
+    sudo vi archivo
+
+<<<<<<<<< HEAD //lo que tenemos nosotros
+<<<<<<<<<<<<< numero_commit //lo que tiene el remoto
+
+Para eso borras y lo subes.
+
 ## Git restore
 
 Restore te permite eliminar archivos añadidos por git add
@@ -180,9 +197,13 @@ Cambiar de rama
     git checkout nombre_rama
 
 
-mezclar ramas y deja el gráfico de las ramas
+mezclar ramas y deja el gráfico de las ramas. Lu que haces es fusionar una rama con la otra, para que main tenga esos commit.
 
     git merge nombre_rama
+
+borrar ramas
+
+    git branch --detele nombre_rama
 
  
 Primero te vas a la rama master y luego unes con la rama
@@ -207,6 +228,66 @@ Que es git fetch? Trae los cambios pero los deja en otra rama
     
     git pull = git fetch + git merge FETCH_HEAD
 
+
+
+Para ver commit 
+
+    git log
+
+Para cambiarte
+
+    git checkout HEAD~6
+
+Si cambias cosas ahí, se crea una rama nueva que se llama main~6
+
+Y ahora estás en un estado de commit anterior. Para volver al main 
+
+    git checkout main
+
+Una rama es un puntero a un commit a un momento de un commit.
+
+-b-c-d----> main
+si haces una rama sobre el commit d, entonces mantiene los commit b,c,d y los que se hagan sobre la rama concreta.
+
+Si haces un git push de una rama creada, te pedírá donde meter esa rama
+    git push --set-upstream origin nombre_rama_nueva
+y se puede ver en github como network, network graph.
+
+Ahora al intentar cambiarte a la rama main 
+
+    git checkout main
+
+Te dice que es necesario que hagas commit o stash, para eso haces, el stash es guardar tu progreso pero sin hacer commit.
+
+    git stash 
+
+Es como una zona "sucia"
+
+Y para ver todos, haces
+
+    git stash list
+
+Y para sacar algo del stash es 
+
+    git stash pop --index 2
+
+
+## Pull request
+
+Sirven para hacer contribuciones al repositorio de alguien. Primero haces un fork
+
+    git fork
+
+Y sobre ese fork ya puedes hacer commit y trabajar y despues de haces el pull request. Es aconsejable hacer cambios en una nueva rama.
+Seria:
+
+    git fork repo
+    git branch rama_modificacion
+    git checkout rama_modificacion
+    git add archivos
+    git commit -am "cambios"
+    git push --set-upstream origin rama_modificacion
+    Luego en github haces pull request de esa rama con las modificaciones
 
 
 ## Test y taller curso-TDD
