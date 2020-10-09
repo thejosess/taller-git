@@ -6,7 +6,7 @@ para el manual completo
 
         man git-orden     
        
-Para iniciar repositorio con branch principal que se llama main
+Para iniciar repositorio con branch principal que se llama main. (para ir al final mayusc + G)
     
         git init -b main
 
@@ -376,6 +376,6 @@ script:  docker run -v  $TRAVIS_BUILD_DIR:/test jjmerelo/raku-test
 
 **Para más información**
 
-[curso TDD](https://github.com/JJ/curso-tdd/blob/master/temas/servicios.md)
+[curso TDD](https://github.com/JJ/curso-tdd)
 
 [Trabajo microservicios](https://github.com/thejosess/microservicios/blob/main/README.md)
