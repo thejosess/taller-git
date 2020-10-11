@@ -379,3 +379,5 @@ script:  docker run -v  $TRAVIS_BUILD_DIR:/test jjmerelo/raku-test
 [curso TDD](https://github.com/JJ/curso-tdd)
 
 [Trabajo microservicios](https://github.com/thejosess/microservicios/blob/main/README.md)
+
+[taller GIT deiit](https://github.com/DEIIT/taller-git-y-github/blob/master/src/taller-git-y-github.md)
