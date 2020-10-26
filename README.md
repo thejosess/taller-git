@@ -292,7 +292,7 @@ Seria:
 
 ## Test y taller curso-TDD
 
-Para crear issues tienes que crear historias de usuario y entonces la issue se encarga de que se cumple una historia de usuario.  
+Para crear issues tienes que crear historias de usuario y entonces la issue se encarga de que se cumple una historia de usuario. Las issues incluyen tanto HU como otros términos.  
 Parar crear issue vas en github y pones issue, crear issue y la rellenas segun una  [plantilla qa](https://jj.github.io/curso-tdd/).  Las issues se agrupan en milestones (seleccionas en github varias y le das a milestone).     
 
 Los errores y manejar excepciones se crean de forman paralelea y vienen por la necesidad de las HU.    Diseño dirigido por dominio ("se deben de crear modelos de partes del dominio del problema limitados en su contexto, de forma que sea sencillo dividir el proceso de implementación en equipos, cada uno de ellos responsables de una parte del diseño. La integración continua (y los tests correspondientes), permitirán que se asegure la calidad del producto resultante")    
