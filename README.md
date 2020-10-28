@@ -36,6 +36,10 @@ Cuando haces varios commit se quedan varios ahi y para gestionarlos
 Al hacer el log coges una cadena que pone al lado de commit, y haces
 
     git log id_comit
+    
+Version en grafo 
+
+	git log --graph id_commit
 
 
 Para ver cambios al ultimo commit, ver cambios entre staged area y el local
@@ -53,6 +57,22 @@ Entre staged y remoto
 Para hacer commit y add de archivos ya añadidos 
 
     git commit -am "texto"
+    
+Borrar commit superiores al que quieres volver y volver a un commit concreto
+
+	git reset <id_commit>
+	
+Fichero vuelva al estado del commit
+
+	git checkout HEAD carpeta/fichero
+	
+Ver mas info del commit 
+
+	git show <id_commi>
+
+Ver un commit sin borrar nada, lo pone al final de la pila para volver a trabajar sobre ese
+
+	git revert  ^c
 
 
 ## Local y remoto
