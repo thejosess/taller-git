@@ -60,6 +60,8 @@ y luego quiere subir ese repositorio a uno de github, haces
     git remote add origin git@github:thejosess/nombre_repo_creadoEnGIthub
 
     git remote add <remoto> <direccion>
+    
+    git push -u origin main
 
 Y para ver remote
 
