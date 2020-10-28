@@ -43,7 +43,12 @@ Para ver cambios al ultimo commit, ver cambios entre staged area y el local
     git diff    
 
 Entre commit 
+
     git diff HEAD id_comit
+    
+Entre staged y remoto
+
+	git diff --staged
 
 Para hacer commit y add de archivos ya añadidos 
 
