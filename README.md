@@ -74,6 +74,10 @@ Ver un commit sin borrar nada, lo pone al final de la pila para volver a trabaja
 
 	git revert  ^c
 
+Para que los archivos tambien vuelvan al estado de HEAD	original
+
+	git checkout HEAD carpeta/archivo
+
 
 ## Local y remoto
 
@@ -208,7 +212,7 @@ Deshacer todos los cambios de un archivo
 
 ## Ramas
 
-Separar ramas para hacer testeo, experimientación, etc. Rama main es estable y el resto para esas nuevas funcionales que están desarrollando inestables.
+Separar ramas para hacer testeo, experimientación, etc. Rama main es estable y el resto para esas nuevas funcionales que están desarrollando inestables. Rama por funcionalidad.
 
 Ver las ramas de nuestro repo
 
