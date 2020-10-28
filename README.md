@@ -38,7 +38,7 @@ Al hacer el log coges una cadena que pone al lado de commit, y haces
     git log id_comit
 
 
-Para ver cambios al ultimo commit
+Para ver cambios al ultimo commit, ver cambios entre staged area y el local
 
     git diff    
 
