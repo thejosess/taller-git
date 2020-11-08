@@ -53,6 +53,8 @@ Entre commit
 Entre staged y remoto
 
 	git diff --staged
+	
+![](./imagenes/Screenshot_20201108_183115.png)
 
 Para hacer commit y add de archivos ya añadidos 
 
