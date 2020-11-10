@@ -6,7 +6,7 @@ para el manual completo
 
         man git-orden     
        
-Para iniciar repositorio con branch principal que se llama main. (para ir al final mayusc + G)
+Para iniciar repositorio con branch principal que se llama main. (para ir al final mayusc + G). En la carpeta $PWD/.git se guardo todo
     
         git init -b main
 
@@ -23,6 +23,7 @@ Pueden ser untracked que nos los reconoce y unstanged
 
     Cuando haces eso para a staged, para volver a unstanged. git restore 
 
+![](./imagenes/imagen3.png)
 
 
 Para subir los cambios a ese repositorio sería con git commit -m "mensaje corto" -m "mensaje largo". 
@@ -261,6 +262,7 @@ Que es git fetch? Trae los cambios pero los deja en otra rama
     
     git pull = git fetch + git merge FETCH_HEAD
 
+![](./imagenes/imagen4.png)
 
 
 Para ver commit 
