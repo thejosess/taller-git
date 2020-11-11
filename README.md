@@ -369,26 +369,26 @@ El archivo qa.json explica el lenguaje, la forma de construcción, donde está e
 
 El archivo META6.json se centra en las depedencias, versión del lenguaje, etc.
 
-    {
-  "name": "IncidenciasTrafico",
-  "version": "0.1",
-  "perl": "6.*",
-  "depends": [
-    "sake",
-    "JSON::Fast"
-  ],
-  "resources": [ "data.json"],
-  "build-depends": [],
-  "test-depends": [],
-    "provides": {
-	"IncidenciasTrafico::JSON"     : "lib/IncidenciasTrafico/JSON.pm6",
-	"IncidenciasTrafico::Dator"          : "lib/IncidenciasTrafico/Dator.pm6",
-	"IncidenciasTrafico::Stored"         : "lib/IncidenciasTrafico/Stored.pm6",
-	"IncidenciasTrafico::NoTipo"      : "lib/IncidenciasTrafico/NoTipo.pm6",
-	"IncidenciasTrafico::Incidencia"          : "lib/IncidenciasTrafico/Incidencia.pm6",
-	"IncidenciasTrafico::Zona"      : "lib/IncidenciasTrafico/Zona.pm6"
-  }
-}
+	    {
+	  "name": "IncidenciasTrafico",
+	  "version": "0.1",
+	  "perl": "6.*",
+	  "depends": [
+	    "sake",
+	    "JSON::Fast"
+	  ],
+	  "resources": [ "data.json"],
+	  "build-depends": [],
+	  "test-depends": [],
+	    "provides": {
+		"IncidenciasTrafico::JSON"     : "lib/IncidenciasTrafico/JSON.pm6",
+		"IncidenciasTrafico::Dator"          : "lib/IncidenciasTrafico/Dator.pm6",
+		"IncidenciasTrafico::Stored"         : "lib/IncidenciasTrafico/Stored.pm6",
+		"IncidenciasTrafico::NoTipo"      : "lib/IncidenciasTrafico/NoTipo.pm6",
+		"IncidenciasTrafico::Incidencia"          : "lib/IncidenciasTrafico/Incidencia.pm6",
+		"IncidenciasTrafico::Zona"      : "lib/IncidenciasTrafico/Zona.pm6"
+	  }
+	}
 
 Es necesario tambien hacer test internos de nuestro código, test de forma automática en la nube (travis), smoke test, test unitarios, etc. Mirar todo el mundo de tests. Tambien se pueden acelerar estos tests con docker (una carpeta para los archivos de tests). Y para lanzar travis hay que aceptarlo en github y luego crear un archivo
 
