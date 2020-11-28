@@ -238,6 +238,10 @@ mezclar ramas y deja el gráfico de las ramas. Lu que haces es fusionar una rama
 borrar ramas
 
     git branch --detele nombre_rama
+    
+borrar ramas en remoto
+
+    git push origin :branch1
 
  
 Primero te vas a la rama master y luego unes con la rama
