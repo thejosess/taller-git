@@ -242,7 +242,21 @@ borrar ramas
 borrar ramas en remoto
 
     git push origin :branch1
+    
+actualizar ramas borradas
 
+	git remote upadte origin --prune
+
+	git branch -a
+
+traer cambios de la rama develop
+
+	git pull
+	git merge origin/develop
+	
+descartar cambios en local
+
+	git resert --hard HEAD	
  
 Primero te vas a la rama master y luego unes con la rama
     
