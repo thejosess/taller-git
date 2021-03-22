@@ -238,6 +238,7 @@ mezclar ramas y deja el gráfico de las ramas. Lu que haces es fusionar una rama
 borrar ramas
 
     git branch --detele nombre_rama
+    git branch -d nombre_rama
     
 borrar ramas en remoto
 
